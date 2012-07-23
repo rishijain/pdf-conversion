@@ -25,6 +25,10 @@ PdfConversion::Application.routes.draw do
   #     end
   #   end
 
+  match '/html_with_images', :to => 'home#html_with_images'
+  match '/html_with_table', :to => 'home#html_with_table'
+  match '/to_pdf_images', :to => 'home#to_pdf_images'
+  match '/to_pdf_table', :to => 'home#to_pdf_table'
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
@@ -55,4 +59,5 @@ PdfConversion::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  root :to => 'home#index'
 end

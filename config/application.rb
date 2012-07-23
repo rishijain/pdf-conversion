@@ -42,7 +42,6 @@ module PdfConversion
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     
-    #for pdfkit
     config.middleware.use PDFKit::Middleware, :print_media_type => true
 
     # Use SQL instead of Active Record's schema dumper when creating the database.

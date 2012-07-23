@@ -1,0 +1,14 @@
+= link_to 'home', root_path
+= link_to 'to pdf', to_pdf_table_path
+%table
+  %thead
+    %tr
+      %th sr no
+      %th Number
+  %tbody
+    - 1000.times do |d|
+      %tr
+        %td #{d}
+        %td #{d}
+
+
